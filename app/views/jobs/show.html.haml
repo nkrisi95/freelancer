@@ -1,0 +1,9 @@
+%h1
+  = @job.title
+= @job.description
+
+%br
+
+= link_to 'Back', root_path
+= link_to 'Edit', edit_job_path
+= link_to 'Delete', { action: :destroy, id: @job.id }, method: :delete, data: { confirm: 'Are you sure?' }
